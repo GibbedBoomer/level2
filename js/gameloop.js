@@ -12,10 +12,10 @@ var player;
 	context = canvas.getContext("2d");	
 	
 	//Instantiate the Player and NPCs
-	player = new GameObject(50,50,100,100,"yellow");
-	npc1 = new GameObject(50,500,100,100,"yellow");
-	npc2 = new GameObject(500,500,100,100,"yellow");
-	npc3 = new GameObject(950,500,100,100,"yellow");
+	player = new GameObject(0,50,50,150,"purple");
+	//npc1 = new GameObject(50,500,100,100,"yellow");
+	//npc2 = new GameObject(500,500,100,100,"yellow");
+	//npc3 = new GameObject(950,500,100,100,"yellow");
 
 	//Set the Animation Timer
 	timer = setInterval(animate, interval);
@@ -27,16 +27,16 @@ function animate()
 	
 	
 	//Move the Player to the right
-	if(d)
-	{
-		console.log("Moving Right");
-		player.x += 4;
-	}
-	if(a)
-	{
-		console.log("Moving Left");
-		player.x += -4;
-	}
+	//if(d)
+	//{
+		//console.log("Moving Right");
+		//player.x += 4;
+	//}
+	//if(a)
+	//{
+		//console.log("Moving Left");
+		//player.x += -4;
+	//}
 
 	if (w) {
 		console.log("Moving UP");
@@ -49,29 +49,29 @@ function animate()
 //////////////////////
 /////////////////////
 
-	if (npc1.collisionCheck(player))
-	{
-		npc1.color = "green";
-	}
-	else
-	{
+	//if (npc1.collisionCheck(player))
+	//{
 		//npc1.color = "green";
-	}
+	//}
+	//else
+	//{
+		//npc1.color = "green";
+	//}
 
-	if(npc2.collisionCheck(player))
-	{
-		context.strokeRect(npc2.x-npc2.width/2, npc2.y-npc2.height/2, npc2.width, npc2.height);
-	}
+	//if(npc2.collisionCheck(player))
+	//{
+		//context.strokeRect(npc2.x-npc2.width/2, npc2.y-npc2.height/2, npc2.width, npc2.height);
+	//}
 
-	if(npc3.collisionCheck(player))
-	{
-		player.x = player.prevX
-	}
+	//if(npc3.collisionCheck(player))
+	//{
+		//player.x = player.prevX
+	//}
 	
 	//Update the Screen
 	player.drawRect();
-	npc1.drawCircle();
-	npc2.drawCircle();
-	npc3.drawCircle();
+	//npc1.drawCircle();
+	//npc2.drawCircle();
+	//npc3.drawCircle();
 }
 
