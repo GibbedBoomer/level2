@@ -82,24 +82,10 @@ function animate()
 //////////////////////
 /////////////////////
 
-	//if (npc1.collisionCheck(player))
-	//{
-		//npc1.color = "green";
-	//}
-	//else
-	//{
-		//npc1.color = "green";
-	//}
-
-	//if(npc2.collisionCheck(player))
-	//{
-		//context.strokeRect(npc2.x-npc2.width/2, npc2.y-npc2.height/2, npc2.width, npc2.height);
-	//}
-
-	//if(npc3.collisionCheck(player))
-	//{
-		//player.x = player.prevX
-	//}
+	if (ball.collisionCheck(player))
+	{
+		ball.vx = -ball.vx;
+	}
 
 //////////////////////
 /////////////////////
