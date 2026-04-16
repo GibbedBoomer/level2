@@ -82,10 +82,33 @@ function animate()
 	}
 //////////////////////
 /////////////////////
-
+	//ball hits top
 	if (ball.collisionCheck(player))
 	{
-		ball.vx = -ball.vx;
+		if (ball.y < player.y - 25)
+		{
+			ball.vx = ball.vx + ball.force;
+			ball.vy = ball.vy - ball.force;
+		}
+	}
+
+	//ball hits center
+	if (ball.collisionCheck(player))
+	{
+		if (ball.y < player.y + 25 && ball.y > player.y - 25)
+		{
+			ball.vx = -ball.vx;
+		}
+	}
+
+	//ball hits bottom
+	if (ball.collisionCheck(player))
+	{
+		if (ball.y > player.y + 25)
+		{
+			ball.vx = ball.vx + ball.force;
+			ball.vy = ball.vy + ball.force;
+		}
 	}
 
 //////////////////////

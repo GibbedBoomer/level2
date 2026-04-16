@@ -48,9 +48,10 @@ function GameObject(x,y,w,h,color)
 	this.prevY = this.y;
 	
 	//player's velocity or speed on each axis
-	this.vx = 5;
-	this.vy = 5;
+	this.vx = -5;
+	this.vy = 0;
 	
+	this.force = 5;
 
 	
 	//This draws the player to the screen
