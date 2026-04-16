@@ -12,7 +12,7 @@ var player;
 	context = canvas.getContext("2d");	
 	
 	//Instantiate the Player and NPCs
-	player = new GameObject(0,50,50,150,"purple");
+	player = new GameObject(0,450,50,150,"purple");
 	//npc1 = new GameObject(50,500,100,100,"yellow");
 	//npc2 = new GameObject(500,500,100,100,"yellow");
 	//npc3 = new GameObject(950,500,100,100,"yellow");
@@ -67,7 +67,24 @@ function animate()
 	//{
 		//player.x = player.prevX
 	//}
-	
+
+//////////////////////
+/////////////////////
+
+	//--------------Bounce of Top----------------------
+	if(player.y <= player.height/2)
+	{
+		player.y += 4;
+	}
+	//---------------------------------------------------
+
+	//--------------Bounce of Bottom----------------------
+	if(player.y >= canvas.height - player.height/2)
+	{
+		player.y -= 4;
+	}
+	//---------------------------------------------------
+
 	//Update the Screen
 	player.drawRect();
 	//npc1.drawCircle();

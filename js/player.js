@@ -45,6 +45,7 @@ function GameObject(x,y,w,h,color)
 	}
 
 	this.prevX = this.x;
+	this.prevY = this.y;
 	
 	//player's velocity or speed on each axis
 	this.vx = 2;
@@ -89,9 +90,9 @@ function GameObject(x,y,w,h,color)
 	{
 		if (
 			this.left() < obj.right() && 
-			this.right() > obj.left() && 
-			this.top() < obj.bottom() //&& 
-		//	this.bottom() > obj.top()
+			this.right() > obj.left() &&
+			this.top() < obj.bottom() && 
+			this.bottom() > obj.top()
 			)
 		{
 				console.log("COLLIDE");
