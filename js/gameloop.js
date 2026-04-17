@@ -13,8 +13,8 @@ var ball;
 	context = canvas.getContext("2d");	
 	
 	//Instantiate the Player and NPCs
-	player = new GameObject(0,450,50,150,"purple");
-	ball = new GameObject(450,450,100,100,"red");
+	player = new GameObject(0,450,25,150,"purple");
+	ball = new GameObject(450,450,30,30,"red");
 	//npc1 = new GameObject(50,500,100,100,"yellow");
 	//npc2 = new GameObject(500,500,100,100,"yellow");
 	//npc3 = new GameObject(950,500,100,100,"yellow");
@@ -74,11 +74,11 @@ function animate()
 
 	if (w) {
 		console.log("Moving UP");
-		player.y += -4;
+		player.y += -8;
 	}
 	if (s) {
 		console.log("Moving Down");
-		player.y += 4;
+		player.y += 8;
 	}
 //////////////////////
 /////////////////////
@@ -117,14 +117,14 @@ function animate()
 	//--------------Bounce of Top----------------------
 	if(player.y <= player.height/2)
 	{
-		player.y += 4;
+		player.y += 8;
 	}
 	//---------------------------------------------------
 
 	//--------------Bounce of Bottom----------------------
 	if(player.y >= canvas.height - player.height/2)
 	{
-		player.y -= 4;
+		player.y -= 8;
 	}
 	//---------------------------------------------------
 

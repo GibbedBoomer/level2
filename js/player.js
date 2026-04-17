@@ -51,7 +51,7 @@ function GameObject(x,y,w,h,color)
 	this.vx = -5;
 	this.vy = 0;
 	
-	this.force = 5;
+	this.force = 2;
 
 	
 	//This draws the player to the screen
